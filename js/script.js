@@ -32,8 +32,12 @@ const galeriaconteiner = document.querySelector(".bicicleta-imagens");
 
 function trocarImagens(event){
     const img = event.currentTarget
-    galeriaconteiner.prepend(img)
-    console.log(img)
+    const media = matchMedia("(min-width: 1000px)").matches;
+    if (media){
+        galeriaconteiner.prepend(img)
+    }
+    
+    
 }
 
 function eventosGaleria(img){
